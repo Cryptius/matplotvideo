@@ -41,8 +41,8 @@ class CV2VideoPlayer:
         if not self.__cap.isOpened():
             raise Exception(f"Could not read {filename}")
 
-        self.__frame_count = int(self.__cap.get(cv2.cv2.CAP_PROP_FRAME_COUNT))
-        self.__fps = self.__cap.get(cv2.cv2.CAP_PROP_FPS)
+        self.__frame_count = int(self.__cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        self.__fps = self.__cap.get(cv2.CAP_PROP_FPS)
 
         self.__playback_rate = 1.0
 
