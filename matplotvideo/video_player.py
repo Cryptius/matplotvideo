@@ -138,7 +138,11 @@ class CV2VideoPlayer:
         r = 720.0 / im.shape[1]
         dim = (720, int(im.shape[0] * r))
         im = cv2.resize(im, dim, interpolation=cv2.INTER_AREA)
-        cv2.imshow(self.__window_name, im)
+        
+        # including the colab workaround for now
+
+        #cv2.imshow(self.__window_name, im)
+        cv2_imshow(self.__window_name, im)
 
     def on_timer(self):
         if self.__status == "stopped":
